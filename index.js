@@ -40,11 +40,13 @@ async function run() {
 
     // -------
     // routers
-   
+
     app.get('/toys', async (req, res) => {
       const result = await toysCollection.find().toArray();
       res.send(result);
-    })
+    });
+    // https://toy-safari-server.vercel.app/toys
+
 
 
 
