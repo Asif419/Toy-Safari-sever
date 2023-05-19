@@ -37,17 +37,39 @@ async function run() {
     // database intro
 
     const toysCollection = client.db("toySafari").collection("toys");
+    // creating index
+    // const indexKeys = { toyName: 1 };
+    // const indexOptions = { name: "toy" };
+    // await toysCollection.createIndex(indexKeys, indexOptions);
 
     // -------
     // routers
 
     app.get('/toys', async (req, res) => {
-      const result = await toysCollection.find().toArray();
+      const result = await toysCollection.find().limit(20).toArray();
       res.send(result);
     });
     // https://toy-safari-server.vercel.app/toys
 
 
+    app.get('/toys/:category', async (req, res) => {
+      const category = req.params.category;
+      const query = { "subCategory": { $regex: new RegExp(`^${category}$`, 'i') } };
+      const result = await toysCollection.find(query).toArray();
+      res.send(result);
+      // console.log(category);
+    })
+    // https://toy-safari-server.vercel.app/toys/
+
+    app.get('/searchToys/:text', async (req, res) => {
+      const searchedText = req.params.text;
+      console.log(searchedText);
+      const result = await toysCollection.find({
+        toyName: { $regex: searchedText, $options: "i" }
+      }).toArray();
+      res.send(result);
+    })
+    // https://toy-safari-server.vercel.app/searchToys/
 
 
     // Send a ping to confirm a successful connection

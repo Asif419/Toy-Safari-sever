@@ -1,0 +1,218 @@
+[
+  {
+    "sellerName": "Robindro",
+    "toyName": "Dog",
+    "subCategory": "Domestic",
+    "price": {
+      "$numberDouble": "29.99"
+    },
+    "availableQuantity": {
+      "$numberInt": "5"
+    },
+    "pictureURL": "https://i.ibb.co/4tFsFws/dog.webp",
+    "sellerEmail": "sales@Robindro.com",
+    "sellerImageURL": "https://i.ibb.co/Cm4YfDL/photo.jpg",
+    "rating": {
+      "$numberDouble": "4.2"
+    },
+    "description": "Unleash the joy and loyalty of having a furry friend with this lifelike dog toy. Perfect for animal lovers and imaginative play, this dog toy will be your constant companion and bring endless moments of playfulness and affection."
+  },
+  {
+    "sellerName": "Robindro",
+    "toyName": "Lion",
+    "subCategory": "Wild",
+    "price": {
+      "$numberDouble": "39.99"
+    },
+    "availableQuantity": {
+      "$numberInt": "3"
+    },
+    "pictureURL": "https://i.ibb.co/r4M8jK4/Lion.jpg",
+    "sellerEmail": "sales@Robindro.com",
+    "sellerImageURL": "https://i.ibb.co/Cm4YfDL/photo.jpg",
+    "rating": {
+      "$numberDouble": "4.7"
+    },
+    "description": "Embark on thrilling animal adventures with this set of realistic safari animal figures. Inspire creativity and learn about the wonders of wildlife."
+  },
+  {
+    "sellerName": "John Smith",
+    "toyName": "Horse",
+    "subCategory": "Domestic",
+    "price": {
+      "$numberInt": "20"
+    },
+    "availableQuantity": {
+      "$numberInt": "10"
+    },
+    "pictureURL": "https://i.ibb.co/VBFc1vP/Horse.webp",
+    "sellerEmail": "john.smith@gmail.com",
+    "sellerImageURL": "https://i.ibb.co/Cm4YfDL/photo.jpg",
+    "rating": {
+      "$numberInt": "5"
+    },
+    "description": "This beautiful horse is perfect for any little girl or boy. It has long, flowing mane and tail and comes with a variety of accessories to choose from. Your child will love playing with their new friend for hours on end."
+  },
+  {
+    "sellerName": "John Smith",
+    "toyName": "Eagle",
+    "subCategory": "Bird",
+    "price": {
+      "$numberInt": "17"
+    },
+    "availableQuantity": {
+      "$numberInt": "12"
+    },
+    "pictureURL": "https://i.ibb.co/Wn2fnTL/Eagle.jpg",
+    "sellerEmail": "john.smith@gmail.com",
+    "sellerImageURL": "https://i.ibb.co/Cm4YfDL/photo.jpg",
+    "rating": {
+      "$numberInt": "4.2"
+    },
+    "description": "This beautiful eagle is perfect for any little girl or boy who loves to play pretend. It comes with a variety of accessories that can be used to create any adventure your child can imagine. Your child will be entertained for hours on end as they play with their new friend."
+  },
+  {
+    "sellerName": "Jane Doe",
+    "toyName": "Cat",
+    "subCategory": "Domestic",
+    "price": {
+      "$numberInt": "50"
+    },
+    "availableQuantity": {
+      "$numberInt": "5"
+    },
+    "pictureURL": "https://i.ibb.co/R9SXnGJ/Cat.jpg",
+    "sellerEmail": "jane.doe@gmail.com",
+    "sellerImageURL": "https://i.ibb.co/Cm4YfDL/photo.jpg",
+    "rating": {
+      "$numberInt": "4"
+    },
+    "description": "This amazing cat is perfect for any child who loves to play pretend. It comes with a variety of accessories that can be used to create any adventure your child can imagine. Your child will be entertained for hours on end as they play with their new friend"
+  },
+  {
+    "sellerName": "Jane Doe",
+    "toyName": "Tiger",
+    "subCategory": "Wild",
+    "price": {
+      "$numberInt": "57"
+    },
+    "availableQuantity": {
+      "$numberInt": "9"
+    },
+    "pictureURL": "https://i.ibb.co/MSfgpgQ/Tiger.jpg",
+    "sellerEmail": "jane.doe@gmail.com",
+    "sellerImageURL": "https://i.ibb.co/Cm4YfDL/photo.jpg",
+    "rating": {
+      "$numberInt": "4.3"
+    },
+    "description": "This amazing tiger is perfect for any child who loves to play pretend. It comes with a variety of accessories that can be used to create any adventure your child can imagine. Your child will be entertained for hours on end as they play with their new friend."
+  },
+  {
+    "sellerName": "Michael Jones",
+    "toyName": "Hawk",
+    "subCategory": "Bird",
+    "price": {
+      "$numberInt": "15"
+    },
+    "availableQuantity": {
+      "$numberInt": "15"
+    },
+    "pictureURL": "https://i.ibb.co/6wwp7Z4/Hawk.jpg",
+    "sellerEmail": "michael.jones@gmail.com",
+    "sellerImageURL": "https://i.ibb.co/Cm4YfDL/photo.jpg",
+    "rating": {
+      "$numberInt": "3"
+    },
+    "description": "This action figure is perfect for any child who loves to play pretend. It comes with a variety of accessories that can be used to create any adventure your child can imagine. Your child will be entertained for hours on end as they play with their new friend."
+  },
+  {
+    "sellerName": "Michael Jones",
+    "toyName": "Cow",
+    "subCategory": "Domestic",
+    "price": {
+      "$numberInt": "11"
+    },
+    "availableQuantity": {
+      "$numberInt": "17"
+    },
+    "pictureURL": "https://i.ibb.co/j6K82ZQ/Cow.jpg",
+    "sellerEmail": "michael.jones@gmail.com",
+    "sellerImageURL": "https://i.ibb.co/Cm4YfDL/photo.jpg",
+    "rating": {
+      "$numberInt": "4.1"
+    },
+    "description": "The Cow Toy is a fun and interactive toy designed for playful cows. Made from durable and non-toxic materials, it is safe for cows of all ages. The toy features a soft and squishy body with a built-in squeaker that produces an exciting sound when squeezed."
+  },
+  {
+    "sellerName": "Sarah Williams",
+    "toyName": "Bear",
+    "subCategory": "Wild",
+    "price": {
+      "$numberInt": "30"
+    },
+    "availableQuantity": {
+      "$numberInt": "10"
+    },
+    "pictureURL": "https://i.ibb.co/GJdPmnf/Bear.jpg",
+    "sellerEmail": "sarah.williams@gmail.com",
+    "sellerImageURL": "https://i.ibb.co/Cm4YfDL/photo.jpg",
+    "rating": {
+      "$numberInt": "5"
+    },
+    "description": "Unleash the untamed spirit of the wilderness with this lifelike bear toy. Perfect for nature enthusiasts and imaginative play, this bear toy will provide endless hours of adventure and companionship."
+  },
+  {
+    "sellerName": "Sarah Williams",
+    "toyName": "Owl",
+    "subCategory": "Bird",
+    "price": {
+      "$numberInt": "13"
+    },
+    "availableQuantity": {
+      "$numberInt": "14"
+    },
+    "pictureURL": "https://i.ibb.co/6mtDfZX/Owl.webp",
+    "sellerEmail": "sarah.williams@gmail.com",
+    "sellerImageURL": "https://i.ibb.co/Cm4YfDL/photo.jpg",
+    "rating": {
+      "$numberInt": "4.9"
+    },
+    "description": "Unleash your love for nature with this adorable owl toy. It's perfect for bird enthusiasts of all ages. Let your imagination take flight as you explore the wonders of the avian world."
+  },
+  {
+    "sellerName": "AnimalAdventuresCo",
+    "toyName": "Chicken",
+    "subCategory": "Domestic",
+    "price": {
+      "$numberDouble": "39.99"
+    },
+    "availableQuantity": {
+      "$numberInt": "3"
+    },
+    "pictureURL": "https://i.ibb.co/9TG5YgX/Chicken.jpg",
+    "sellerEmail": "support@animaladventuresco.com",
+    "sellerImageURL": "https://i.ibb.co/Cm4YfDL/photo.jpg",
+    "rating": {
+      "$numberDouble": "4.7"
+    },
+    "description": "Inspire farmyard fun with this delightful chicken toy. Let your imagination soar as you explore life on the farm, cluck along, and embark on imaginative adventures."
+  },
+  {
+    "sellerName": "AnimalAdventuresCo",
+    "toyName": "Wolf",
+    "subCategory": "Wild",
+    "price": {
+      "$numberDouble": "29.99"
+    },
+    "availableQuantity": {
+      "$numberInt": "4"
+    },
+    "pictureURL": "https://i.ibb.co/5GLdDbG/Wolf.jpg",
+    "sellerEmail": "support@animaladventuresco.com",
+    "sellerImageURL": "https://i.ibb.co/Cm4YfDL/photo.jpg",
+    "rating": {
+      "$numberDouble": "4.8"
+    },
+    "description": "Unleash the untamed spirit of the wilderness with this realistic wolf toy. Let your imagination roam free as you embark on thrilling adventures in the wild."
+  }
+]
