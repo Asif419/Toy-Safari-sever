@@ -82,7 +82,7 @@ async function run() {
       if (req.query?.email) {
         query = { sellerEmail: req.query.email }
       }
-      const result = await toysCollection.find(query).toArray();
+      const result = await toysCollection.find(query).limit(20).toArray();
       res.send(result);
     })
 
@@ -106,6 +106,12 @@ async function run() {
       res.send(result);
     })
 
+    app.post('/addToy', async(req, res) => {
+      const toy = req.body;
+      const result = await toysCollection.insertOne(toy);
+      res.send(result);
+    })
+    
     app.delete('/myToys/:id', async (req, res) => {
       const id = req.params.id;
       const query = { _id: new ObjectId(id) }
