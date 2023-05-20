@@ -91,12 +91,12 @@ async function run() {
         res.send(result)
       }
       else if (sort === 'true' && order === 'true') {
-        result = await toysCollection.find(query).sort({ price: -1 }).limit(20).toArray();
+        result = await toysCollection.find(query).sort({ price: 1 }).limit(20).toArray();
         console.log(2, false, true);
         res.send(result)
       }
       else if (sort === 'true' && order === 'false') {
-        result = await toysCollection.find(query).sort({ price: 1 }).limit(20).toArray();
+        result = await toysCollection.find(query).sort({ price: -1 }).limit(20).toArray();
         console.log(3);
         res.send(result);
       }
