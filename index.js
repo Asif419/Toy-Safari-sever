@@ -57,7 +57,6 @@ async function run() {
       const query = { subCategory: { $regex: new RegExp(`^${category}$`, 'i') } };
       const result = await toysCollection.find(query).limit(5).toArray();
       res.send(result);
-      // console.log(category);
     })
     // https://toy-safari-server.vercel.app/toys/
 
@@ -87,20 +86,16 @@ async function run() {
       }
       if (sort === 'false') {
         result = await toysCollection.find(query).limit(20).toArray();
-        console.log(1);
         res.send(result)
       }
       else if (sort === 'true' && order === 'true') {
         result = await toysCollection.find(query).sort({ price: 1 }).limit(20).toArray();
-        console.log(2, false, true);
         res.send(result)
       }
       else if (sort === 'true' && order === 'false') {
         result = await toysCollection.find(query).sort({ price: -1 }).limit(20).toArray();
-        console.log(3);
         res.send(result);
       }
-      // console.log(result);
     })
 
     app.put('/myToys/:id', async (req, res) => {
@@ -125,7 +120,6 @@ async function run() {
 
     app.post('/addToy', async (req, res) => {
       const toy = req.body;
-      console.log(toy);
       const result = await toysCollection.insertOne(toy);
       res.send(result);
     })
