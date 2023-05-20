@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
-const { MongoClient, ServerApiVersion } = require('mongodb');
+const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const app = express();
 const port = process.env.PORT || 5000;
 
@@ -54,8 +54,8 @@ async function run() {
 
     app.get('/toys/:category', async (req, res) => {
       const category = req.params.category;
-      const query = { "subCategory": { $regex: new RegExp(`^${category}$`, 'i') } };
-      const result = await toysCollection.find(query).toArray();
+      const query = { subCategory: { $regex: new RegExp(`^${category}$`, 'i') } };
+      const result = await toysCollection.find(query);
       res.send(result);
       // console.log(category);
     })
@@ -63,7 +63,6 @@ async function run() {
 
     app.get('/searchToys/:text', async (req, res) => {
       const searchedText = req.params.text;
-      console.log(searchedText);
       const result = await toysCollection.find({
         toyName: { $regex: searchedText, $options: "i" }
       }).toArray();
@@ -71,6 +70,28 @@ async function run() {
     })
     // https://toy-safari-server.vercel.app/searchToys/
 
+    app.get('/toy/:id', async (req, res) => {
+      const id = req.params.id;
+      const query = { _id: new ObjectId(id) };
+      const result = await toysCollection.find(query).toArray();
+      res.send(result);
+    })
+
+    app.get('/myToys', async (req, res) => {
+      let query = {};
+      if (req.query?.email) {
+        query = { sellerEmail: req.query.email }
+      }
+      const result = await toysCollection.find(query).toArray();
+      res.send(result);
+    })
+
+    app.delete('/myToys/:id', async(req, res) => {
+      const id = req.params.id;
+      const query = {_id: new ObjectId(id)}
+      const result = await toysCollection.deleteOne(query);
+      res.send(result);
+    })
 
     // Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });
