@@ -55,7 +55,7 @@ async function run() {
     app.get('/toys/:category', async (req, res) => {
       const category = req.params.category;
       const query = { subCategory: { $regex: new RegExp(`^${category}$`, 'i') } };
-      const result = await toysCollection.find(query);
+      const result = await toysCollection.find(query).limit(5).toArray();
       res.send(result);
       // console.log(category);
     })
@@ -85,7 +85,7 @@ async function run() {
       if (req.query?.email) {
         query = { sellerEmail: req.query.email }
       }
-      if (sort === 'false' && order === 'false') {
+      if (sort === 'false') {
         result = await toysCollection.find(query).limit(20).toArray();
         console.log(1);
         res.send(result)
