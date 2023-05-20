@@ -78,12 +78,29 @@ async function run() {
     })
 
     app.get('/myToys', async (req, res) => {
+      const sort = req.query.sort;
+      const order = req.query.order;
+      let result = [];
       let query = {};
       if (req.query?.email) {
         query = { sellerEmail: req.query.email }
       }
-      const result = await toysCollection.find(query).limit(20).toArray();
-      res.send(result);
+      if (sort === 'false' && order === 'false') {
+        result = await toysCollection.find(query).limit(20).toArray();
+        console.log(1);
+        res.send(result)
+      }
+      else if (sort === 'true' && order === 'true') {
+        result = await toysCollection.find(query).sort({ price: -1 }).limit(20).toArray();
+        console.log(2, false, true);
+        res.send(result)
+      }
+      else if (sort === 'true' && order === 'false') {
+        result = await toysCollection.find(query).sort({ price: 1 }).limit(20).toArray();
+        console.log(3);
+        res.send(result);
+      }
+      // console.log(result);
     })
 
     app.put('/myToys/:id', async (req, res) => {
@@ -106,12 +123,13 @@ async function run() {
       res.send(result);
     })
 
-    app.post('/addToy', async(req, res) => {
+    app.post('/addToy', async (req, res) => {
       const toy = req.body;
+      console.log(toy);
       const result = await toysCollection.insertOne(toy);
       res.send(result);
     })
-    
+
     app.delete('/myToys/:id', async (req, res) => {
       const id = req.params.id;
       const query = { _id: new ObjectId(id) }
