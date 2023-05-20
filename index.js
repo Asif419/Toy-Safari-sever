@@ -86,12 +86,33 @@ async function run() {
       res.send(result);
     })
 
-    app.delete('/myToys/:id', async(req, res) => {
+    app.put('/myToys/:id', async (req, res) => {
       const id = req.params.id;
-      const query = {_id: new ObjectId(id)}
+      const toy = req.body;
+      const filter = { _id: new ObjectId(id) };
+      const options = { upsert: true };
+      const updateToy = {
+        $set: {
+          toyName: toy.toyName,
+          subCategory: toy.subCategory,
+          price: toy.price,
+          availableQuantity: toy.availableQuantity,
+          pictureURL: toy.pictureURL,
+          rating: toy.rating,
+          description: toy.description
+        }
+      }
+      const result = await toysCollection.updateOne(filter, updateToy, options);
+      res.send(result);
+    })
+
+    app.delete('/myToys/:id', async (req, res) => {
+      const id = req.params.id;
+      const query = { _id: new ObjectId(id) }
       const result = await toysCollection.deleteOne(query);
       res.send(result);
     })
+
 
     // Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });
