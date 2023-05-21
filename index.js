@@ -55,7 +55,7 @@ async function run() {
     app.get('/toys/:category', async (req, res) => {
       const category = req.params.category;
       const query = { subCategory: { $regex: new RegExp(`^${category}$`, 'i') } };
-      const result = await toysCollection.find(query).limit(5).toArray();
+      const result = await toysCollection.find(query).limit(4).toArray();
       res.send(result);
     })
     // https://toy-safari-server.vercel.app/toys/
